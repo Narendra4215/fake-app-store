@@ -9,7 +9,7 @@ const Productrender = (props) => {
   return <ProCont navigate={navigate} params={params} {...props} />
 }
 
-class ProCont extends PureComponent {
+ class ProCont extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -41,9 +41,9 @@ class ProCont extends PureComponent {
 
   render() {
     const { productData } = this.state;
+    if(productData){
 
-    if (!productData) {
-      return <div>loading</div>
+      <div>Loading.....</div>
     }
     return (
       <>

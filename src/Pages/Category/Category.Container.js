@@ -4,39 +4,24 @@ export default class CategoryContainer extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
-      category: [],
       select: "",
       categoryData: [],
       sortby: "",
     }
   };
-
   componentDidMount() {
-    this.categorydataapi();
-  };
+    this.apidata();
+  }
 
-  categorydataapi = () => {
-    fetch("https://fakestoreapi.com/products/categories")
-      .then(res => res.json())
-      .then((data) =>
-        this.setState({ category: data })
-      )
-      .catch(err => {
-        console.log(err)
-      });
-  };
-
-  handleChange = (event) => {
-    const select = event.target.innerHTML;
-    this.setState({ select: select }, () => {
+  componentDidUpdate(prevProps) {
+    if (prevProps.items !== this.props.items) {
       this.apidata();
-    });
-   
-  };
-
+    }
+  }
   apidata = () => {
-    const { select } = this.state;
-    fetch(`https://fakestoreapi.com/products/category/${select}`)
+    const{items}=this.props;
+    console.log(items)
+    fetch(`https://fakestoreapi.com/products/category/${items}`)
       .then(res => res.json())
       .then((data) =>
         this.setState({ categoryData: data })
@@ -76,19 +61,22 @@ export default class CategoryContainer extends PureComponent {
 
     this.setState({ categoryData: sortedData });
   };
-
+  handleitem=(event)=>{
+console.log(event.id)
+  }
 
   render() {
-    const { category, categoryData} = this.state;
+    const { categoryData,} = this.state;
 
- 
+    const{items}=this.props;
+    console.log(items)
+     
     return (
       <div>
         <CateComp
-                category={category}
-                handleChange={this.handleChange}
                 categoryData={categoryData}
                 handleSortChange={this.handleSortChange}
+                handleitem={this.handleitem}
               />
    
       </div>

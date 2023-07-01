@@ -1,55 +1,70 @@
-$baseFontSize: 16px;
+// $baseFontSize: 16px;
 
-@mixin link {
-    color: rgba(11, 1, 4, 0.84);
-    padding-left: 3.2rem;
-    font-size: 1.2rem;
-    font-family: 'Arial Narrow', Arial, sans-serif;
-    letter-spacing: 0.2rem;
-    text-decoration: none;
-    position: relative;
+// @mixin link {
+//     color: rgba(11, 1, 4, 0.84);
+//     padding-left: 3.2rem;
+//     font-size: 1.2rem;
+//     font-family: 'Arial Narrow', Arial, sans-serif;
+//     letter-spacing: 0.2rem;
+//     text-decoration: none;
+//     position: relative;
 
-    &:hover {
-        color: rgb(7, 252, 113);
-        word-spacing: 0.3125rem;
-    }
-}
+//     &:hover {
+//         color: rgb(7, 252, 113);
+//         word-spacing: 0.3125rem;
+//     }
+// }
 
-.home {
-    margin-top: -1.25rem;
-    height: 5rem;
+// .home {
+//     margin-top: -1.25rem;
+//     height: 5rem;
+//     width: 100%;
+//     background-color: #eb8b5bd2;
+
+//     & h3 {
+//         color: rgb(13, 10, 10);
+//         letter-spacing: 0.1rem;
+//         word-spacing: 0.05rem;
+//         padding-top: 0.85rem;
+//     }
+
+//     &-link {
+//         text-align: center;
+//         margin-top: -0.8rem;
+//     }
+
+//     &-home {
+//         @include link();
+//     }
+
+//     &-category {
+//         @include link();
+//     }
+// }
+.home{
+    // position: s;
+
+
+&-image{
+    margin-top: 0px;
+    position: static;
     width: 100%;
-    background-color: #eb8b5bd2;
+    &-img{
+        // position: relative;
+    margin-top: 80px;
 
-    & h3 {
-        color: rgb(13, 10, 10);
-        letter-spacing: 0.1rem;
-        word-spacing: 0.05rem;
-        padding-top: 0.85rem;
-    }
-
-    &-link {
-        text-align: center;
-        margin-top: -0.8rem;
-    }
-
-    &-home {
-        @include link();
-    }
-
-    &-category {
-        @include link();
     }
 }
-
-.footer{
-    color: rgb(2, 2, 2);
-    background-color: #ed8856d2;
-    width: 100%;
-    position: fixed;
-    height: 8rem;
-    text-align: center;
-    padding-top: 1.5rem;
-    font-size: 2rem;
-    letter-spacing: .2rem;
 }
+
+// .footer{
+//     color: rgb(2, 2, 2);
+//     background-color: #ed8856d2;
+//     width: 100%;
+//     position: fixed;
+//     height: 8rem;
+//     text-align: center;
+//     padding-top: 1.5rem;
+//     font-size: 2rem;
+//     letter-spacing: .2rem;
+// }
