@@ -29,21 +29,22 @@
         display: flex;
         flex-wrap: wrap;
         margin-left: 10%;
-   
+
     }
-    &-li{
+
+    &-li {
         background-color: rgb(79, 86, 79);
 
     }
-    &-image{
+
+    &-image {
         height: 250px;
         width: 190px;
     }
-    &-one {
-        
-height: 25rem;
-// background-color: rgb(79, 86, 79);
 
+    &-one {
+
+        height: 25rem;
 
         & ol {
             position: static;
@@ -52,39 +53,44 @@ height: 25rem;
             list-style: none;
         }
     }
-    &-border{
-width: 190px;
+
+    &-border {
+        width: 190px;
 
         border: 2px solid rgb(230, 236, 236);
     }
 
     &-rate li {
         display: inline;
-      
+
     }
-    &-desc{
-    color: #535766;
-    font-size: 14px;
-    line-height: 1.5;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    font-weight: 400;
+
+    &-desc {
+        color: #535766;
+        font-size: 14px;
+        line-height: 1.5;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-weight: 400;
     }
-    &-price{
-    line-height: 1.5;
-    font-size: 14px;
+
+    &-price {
+        line-height: 1.5;
+        font-size: 14px;
 
         color: rgb(2, 10, 10);
-        & strike{
-    color: #7e818c;
-    font-weight: 400;
-    margin-left: 5px;
-    font-size: 12px;
+
+        & strike {
+            color: #7e818c;
+            font-weight: 400;
+            margin-left: 5px;
+            font-size: 12px;
 
 
         }
-        & span{
+
+        & span {
             color: #ff905a;
             font-weight: 400;
             font-size: 12px;
@@ -115,4 +121,3 @@ width: 190px;
         font-size: 11px;
     }
 }
-

@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 import "./Category.scss";
 
-export default class CateComp extends PureComponent {
+export default class CategoryComponent extends PureComponent {
   render() {
     const { categoryData, handleSortChange,handleitem} = this.props;
     const{items}=this.props;

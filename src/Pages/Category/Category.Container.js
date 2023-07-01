@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import CateComp from './Category.Component';
+import CategoryComponent from './Category.Component';
 export default class CategoryContainer extends PureComponent {
   constructor(props) {
     super(props);
@@ -19,7 +20,7 @@ export default class CategoryContainer extends PureComponent {
     }
   }
   apidata = () => {
-    const{items}=this.props;
+    const { items } = this.props;
     console.log(items)
     fetch(`https://fakestoreapi.com/products/category/${items}`)
       .then(res => res.json())
@@ -61,24 +62,24 @@ export default class CategoryContainer extends PureComponent {
 
     this.setState({ categoryData: sortedData });
   };
-  handleitem=(event)=>{
-console.log(event.id)
+  handleitem = (event) => {
+    console.log(event.id)
   }
 
   render() {
-    const { categoryData,} = this.state;
+    const { categoryData, } = this.state;
 
-    const{items}=this.props;
+    const { items } = this.props;
     console.log(items)
-     
+
     return (
       <div>
-        <CateComp
-                categoryData={categoryData}
-                handleSortChange={this.handleSortChange}
-                handleitem={this.handleitem}
-              />
-   
+        <CategoryComponent
+          categoryData={categoryData}
+          handleSortChange={this.handleSortChange}
+          handleitem={this.handleitem}
+        />
+
       </div>
     )
   }

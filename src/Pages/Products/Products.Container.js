@@ -1,15 +1,15 @@
 import React, { PureComponent } from 'react';
-import ProComp from './Products.Component';
 import { useNavigate, useParams } from 'react-router-dom';
+import ProductComponent from './Products.Component';
 
 const Productrender = (props) => {
   const navigate = useNavigate();
   const params = useParams();
   console.log(params)
-  return <ProCont navigate={navigate} params={params} {...props} />
+  return <ProductContainer navigate={navigate} params={params} {...props} />
 }
 
- class ProCont extends PureComponent {
+ class ProductContainer extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -47,7 +47,7 @@ const Productrender = (props) => {
     }
     return (
       <>
-        <ProComp productData={productData} />
+        <ProductComponent productData={productData} />
 
       </>
     )
